@@ -1,6 +1,7 @@
 import { formKey } from '../feedback';
+import _ from 'lodash';
 
-const inputEvent = e => {
+const inputEvent = _.throttle(e => {
   let formStorage = JSON.parse(localStorage.getItem(formKey));
   if (!formStorage) {
     formStorage = { email: '', message: '' };
@@ -10,5 +11,5 @@ const inputEvent = e => {
   formStorage[element.name] = typedValue;
   formStorage = JSON.stringify(formStorage);
   localStorage.setItem(formKey, formStorage);
-};
+}, 500);
 export default inputEvent;
