@@ -1,2 +1,0 @@
-var e=e=>{let t=JSON.parse(localStorage.getItem(a));t||(t={email:"",message:""});const o=e.target,r=o.value;t[o.name]=r,t=JSON.stringify(t),localStorage.setItem(a,t)};var t=()=>{let e=JSON.parse(localStorage.getItem(a));if(e)for(let t in e){let a=document.getElementsByName(`${t}`);a=a[0],a.value=e[t]}};const a="feedback-form-state";(e=>{const t=document.querySelector(e);if(t)return t;throw Error(`the ${e} is not a valid selection`)})(".feedback-form").addEventListener("input",e),window.addEventListener("DOMContentLoaded",t);
-//# sourceMappingURL=03-feedback.55a72c99.js.map
